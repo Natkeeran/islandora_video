@@ -1,0 +1,10 @@
+name: islandora_video
+type: module
+description: Islandora Video
+core: 8.x
+package: islandora
+dependencies:
+  - islandora_collection
+  - islandora_image
+  - video
+

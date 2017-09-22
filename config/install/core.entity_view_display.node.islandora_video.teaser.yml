@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.islandora_video.field_memberof
+    - node.type.islandora_video
+  enforced:
+    module:
+      - islandora_video
+  module:
+    - user
+id: node.islandora_video.teaser
+targetEntityType: node
+bundle: islandora_video
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_memberof: true

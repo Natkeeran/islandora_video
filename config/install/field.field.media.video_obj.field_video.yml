@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video
+    - media_entity.bundle.video_obj
+  enforced:
+    module:
+      - islandora_video
+  module:
+    - video
+id: media.video_obj.field_video
+field_name: field_video
+entity_type: media
+bundle: video_obj
+label: video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

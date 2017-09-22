@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.inline
+    - field.field.media.video_obj.field_video
+    - media_entity.bundle.video_obj
+  enforced:
+    module:
+      - islandora_video
+  module:
+    - video
+id: media.video_obj.inline
+targetEntityType: media
+bundle: video_obj
+mode: inline
+content:
+  field_video:
+    weight: 1
+    settings:
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
+      file_extensions: 'mp4 ogv webm'
+      max_filesize: ''
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: video_upload
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

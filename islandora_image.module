@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains islandora_video.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function islandora_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the islandora_image module.
+    case 'help.page.islandora_video':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Islandora Video') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

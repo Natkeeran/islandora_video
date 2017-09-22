@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.islandora_video
+  enforced:
+    module:
+      - islandora_video
+  module:
+    - node
+id: node.islandora_video
+targetEntityType: node
+bundle: islandora_video
+types:
+  - 'pcdm:Object'
+  - 'schema:VideoObject'
+fieldMappings:
+  field_description:
+    properties:
+      - 'dc:description'
+  field_memberof:
+    properties:
+      - 'pcdm:memberOf'
+    mapping_type: rel
+  field_video:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  field_tn:
+    properties:
+      - 'pcdm:hasFile'
+    mapping_type: rel
+  title:
+    properties:
+      - 'dc:title'
+  created:
+    properties:
+      - 'schema:dateCreated'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  changed:
+    properties:
+      - 'schema:dateModified'
+    datatype_callback:
+      callable: 'Drupal\rdf\CommonDataConverter::dateIso8601Value'
+  uid:
+    properties:
+      - 'schema:author'
+    mapping_type: rel
